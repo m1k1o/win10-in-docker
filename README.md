@@ -41,7 +41,7 @@ docker run -d --name win10-in-docker \
 	-v /lib/modules:/lib/modules \
 	-v /dev:/dev \
 	-v $PWD/Win10_2004_English_x64.iso:/home/arch/win10_x64.iso \
-	-v $PWD/win10.img:/home/arch/win10_hdd.img \
+	-v $PWD/win10_hdd.img:/home/arch/win10_hdd.img \
 	win10
 ```
 
