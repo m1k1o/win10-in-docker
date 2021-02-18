@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-MEM="3072"
-SMP="4,cores=2"
+MEM="16384"
+SMP="16,cores=8"
 OPT="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
 
 while [[ "$#" -gt 0 ]]; do
@@ -23,7 +23,7 @@ qemu-system-x86_64 \
     -usb -device usb-kbd -device usb-tablet \
     -smbios type=2 \
     -drive if=virtio,driver=raw,file="./win10_hdd.img"  \
-    -net nic,model=virtio -net user -cdrom "./win10_x64.iso" \
+    -net nic -net user -cdrom "./win10_x64.iso" \
     -drive file="./virtio-win.iso",index=3,media=cdrom \
     -rtc base=localtime,clock=host \
     -vga virtio
