@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-MEM="16384"
-SMP="16,cores=8"
+MEM="8192"
+SMP="8,cores=4"
 OPT="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
 
 while [[ "$#" -gt 0 ]]; do
